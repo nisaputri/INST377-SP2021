@@ -35,11 +35,7 @@
     "cypress-html-validate": "^1.2.2",
     "cypress-wait-until": "^1.7.1",
     "email-validator": "^2.0.4",
-<<<<<<< HEAD
-    "eslint": "^7.4.0",
-=======
     "eslint": "^7.18.0",
->>>>>>> dd24eee84a2a94bfaf6d9ee3435620e850f0e4b5
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-cypress": "^2.11.1",
     "eslint-plugin-import": "^2.22.0",
