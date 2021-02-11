@@ -1,2 +1,100 @@
 /* Add some css styles based on the tutorial at javascript.info: introduction to browser events
  https://javascript.info/introduction-browser-events */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("file:///Users/nisaputri/Documents/GitHub/INST377-SP2021/public/labs/lab_3/background-fullview.jpg");
+  position: absolute;
+  padding: 10px;
+}
+
+.arrow {
+  top: 60px;
+  padding: 0;
+  background: rgb(191, 212, 214);
+  border-radius: 15px;
+  border: 1px white;
+  font-size: 24px;
+  line-height: 24px;
+  color: #444;
+  display: block;
+  position: absolute;
+}
+
+.arrow:focus {
+  outline: none;
+}
+
+.arrow:hover {
+  background: #ccc;
+  cursor: pointer;
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
+
+.main_container {
+    position: relative;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%; 
+    margin-top: 40%;
+    margin-left: -100;
+    width: 400px;
+    padding: 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background: turquoise;
+    transform: translate( -50%, -50%);
+    
+  }
+
+.pictures_container {
+  height: 130px;
+  width: 9999px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+}
+
+
+.pictures_container img {
+  width: 135px;
+  height: 130px;
+  display: block;
+}
+
+.pictures_container {
+  width: 400px;
+  overflow: hidden;
+}
+
+.pictures_container ul {
+  font-size: 0;
+  height: 130px;
+  width: 9999px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: margin-left 250ms;
+}
+
+.pictures_container li {
+  display: inline-block;
+}
+
+.pictures_container > picture {
+    transition: transform 0.8s ease-in-out;
+}
