@@ -17,7 +17,7 @@ h1 {
 }
 
 body {
-  background-image: url("file:///Users/nisaputri/Documents/GitHub/INST377-SP2021/public/labs/lab_3/background-fullview.jpg");
+  background-image: url("background-fullview.jpg");
   position: absolute;
   padding: 10px;
 }
