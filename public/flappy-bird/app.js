@@ -89,6 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('GAME OVER')
         isGameOver = true
         document.removeEventListener('keyup', control)
+        ground.classList.add('ground')
+        ground.classList.remove('ground-moving')
 
     }
 
