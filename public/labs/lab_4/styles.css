@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
 }
-h1 {
+.header {
     font-family: 'Autour One', cursive;
     color: white;
     text-align: center;
