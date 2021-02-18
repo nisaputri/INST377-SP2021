@@ -43,7 +43,7 @@ app.route('/api')
     console.log('POST request detected');
     console.log('Form data in req.body', req.body);
     console.log('Now send something back to your client');
-    //res.send('Hello World!')
+    res.status(200).send('Hello World!');
     // res.json({data: dataToSendToFrontEnd});
   });
 
