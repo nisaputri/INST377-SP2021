@@ -1,7 +1,7 @@
 /* Put your javascript in here */
 
    //declaring new variables
-   let listOfPictures = document.querySelector('ul');
+   const listOfPictures = document.querySelector('ul');
    let list_images = document.getElementById("images").getElementsByTagName("li");
    let image_width = 135;
    let count_image = 1;
