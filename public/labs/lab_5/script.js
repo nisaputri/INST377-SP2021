@@ -18,8 +18,7 @@ async function dataHandler(mapObjectFromFunction) {
   // and target mapObjectFromFunction to attach markers
   const form = document.querySelector('.searchBar');
   const search = document.querySelector('.search');
-  const suggestions = document.querySelector('.listOfRestaurants');
-  
+  const suggestions = document.querySelector('.listOfRestaurants'); 
   const request = await fetch('/api');
   const location = await request.json();
 
@@ -34,13 +33,6 @@ async function dataHandler(mapObjectFromFunction) {
       suggestions.classList.add('box');
       suggestions.innerText = "There are no matches found with this zipcode! Try Again!";
     };
-
-    const firstLong = firstFive[0].geocoded_column_1.coordinates[0];
-    const firstLat = firstFive[0].geocoded_column_1.coordinates[1];
-    mapObjectFromFunction.setView(new L.LatLng(firstLat, firstLong), 8);
-    mapObjectFromFunction.setZoom(15);
-
-    suggestions.innerHTML = ''; 
 
     firstFive.forEach((item) => {
       const longLat = item.geocoded_column_1.coordinates;
@@ -57,19 +49,16 @@ async function dataHandler(mapObjectFromFunction) {
       suggestions.append(combinedElement);
     });
     
+    const {coordinates} = firstFive[0]?.geocoded_column_1;
+    mapObjectFromFunction.panTo([coordinates[1], coordinates[0]],0);
+
     search.addEventListener('input', (event) => {
       if (search.value.length === 0) {
         suggestions.innerText = '';
         suggestions.classList.remove('box');
       }
-    })
+    });
 
-    search.addEventListener('input', (event) => {
-      if(search.value.length === 0) {
-        suggestions.innerText= '';
-        suggestions.classList.remove('box');
-      }
-    })
   }); 
 }
 
