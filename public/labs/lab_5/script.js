@@ -64,7 +64,6 @@ async function dataHandler(mapObjectFromFunction) {
       }
     })
 
-
     search.addEventListener('input', (event) => {
       if(search.value.length === 0) {
         suggestions.innerText= '';
